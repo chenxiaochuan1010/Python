@@ -108,3 +108,19 @@ In order to get rid of repeats, *set()* function must be used.
 # Nesting
 - a list of dictionaries
 
+# Input() function
+- If a prompt is too long, save it in a variable.
+```
+prompt = "If you tell us who you are, we can personalize the mesages you see."
+prompt += "\nWhat is your first name? "
+
+name = input(prompt)
+print("Hello, %s!" % name.title())
+```
+- Return value of *input()* function is a string!
+- When you use numerical input to do calculations and comparisons, be sure to convert the input value to a numerical representation first.
+- If you're using Python 2.7, use *raw_input()* instead of *input()*.
+
+# While Loops
+A *while* loop runs as long as, or *while*, a certain condition is true.
+
