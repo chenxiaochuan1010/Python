@@ -124,3 +124,25 @@ print("Hello, %s!" % name.title())
 # While Loops
 A *while* loop runs as long as, or *while*, a certain condition is true.
 
+## Using a Flag
+- If many possible events might occur to stop the program, trying to test all these conditions in one *while* statement becomes complicated and difficult.
+- We can write our programs so they run while the *flag* is set to *True* and stop running when any of several events sets the value of the *flag* to False. 
+``` 
+active = True
+while active:
+    message = input(prompt)
+
+    if message == 'quit':
+        active = False
+    else:
+        print(message)
+```
+## Using break to Exit a loop
+- This is another way to exit a loop.
+- You can use the *break* statement in any of Python's loops.
+
+## Using continue in a Loop
+- You can use the *continue* statement to return to the beginning of the loop, based on the result of a conditional test.
+- In case of an infinite loop, press *CTRL+C* to exit the loop. 
+
+
