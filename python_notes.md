@@ -145,4 +145,46 @@ while active:
 - You can use the *continue* statement to return to the beginning of the loop, based on the result of a conditional test.
 - In case of an infinite loop, press *CTRL+C* to exit the loop. 
 
+## Using a while loop with Lists and Dictionaries
+- You shouldn't modify a list inside a *for* loop because Python will have trouble keeping track of the items in the list.
+- To modify a list as you work through it, use a *while* loop.
+```
+# Start with users that need to be verified,
+# and an empty list to hold confirmed users.
+unconfirmed_users = ['alice', 'brian', 'candace']
+confirmed_users = []
 
+# Verify each user until there are no more unconfirmed users.
+# Move each verified user into the list of confirmed users.
+while unconfirmed_users:
+    current_user = unconfirmed_users.pop(0)
+
+    print("Verifiying user: %s" % current_user.title())
+    confirmed_users.append(current_user)
+
+# Display all confirmed users.
+print("\nThe following users have been confirmed:")
+for confirmed_user in confirmed_users:
+    print(confirmed_user.title())
+
+print(unconfirmed_users)
+print(confirmed_users)
+```
+- The *while* loop runs as long as the list *unconfirmed_users* is not empty.
+
+### *remove()*, *del()*, *pop()*
+- *remove()* and *pop()* are methods; *del()* is a function
+- *remove()* takes values as inputs; *pop()* takes index as inputs
+
+### Removing All Instances of Specific Values from a List
+```
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+
+while 'cat' in pets:
+    pets.remove('cat')
+
+print(pets)
+```
+- After printing the list, Python enters the while loop because it finds the value 'cat' in the list at least once. 
+- Once inside the loop, Python removes the first instance of 'cat', returns to the while line, and then reenters the loop when it finds that 'cat' is still in the list. 
