@@ -188,3 +188,33 @@ print(pets)
 ```
 - After printing the list, Python enters the while loop because it finds the value 'cat' in the list at least once. 
 - Once inside the loop, Python removes the first instance of 'cat', returns to the while line, and then reenters the loop when it finds that 'cat' is still in the list. 
+
+# Function
+## Defining a function
+```
+def greet_user():
+    """Display a simple greeting."""
+    print("Hello!")
+
+greet_user()
+```
+- Docstrings are enclosed in triple quotes, which Python looks for when it generates documentation for the functions in your programs.
+
+## Arguments and Parameters
+```
+def greet_user(username):
+    """Display a simple greeting."""
+print("Hello, " + username.title() + "!") greet_user('jesse')
+```
+- 'username' inside the parentheses is called *parameter*
+- when calling the function, people will give a value to 'username' e.g. 'jesse'. 'jesse' is called an argument.
+
+## Passing Arguments
+- positional arguments
+- keyword arguments: the order doesn't matter
+
+## Default Values
+When you use default values, any parameter with a default value needs to be listed after all the parameters that don’t have default values. 
+
+## Return Values
+
