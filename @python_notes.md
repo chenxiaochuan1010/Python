@@ -216,5 +216,55 @@ print("Hello, " + username.title() + "!") greet_user('jesse')
 ## Default Values
 When you use default values, any parameter with a default value needs to be listed after all the parameters that don’t have default values. 
 
-## Return Values
+## Passing a List
+- Parameter of a function could be a list which will be passed to a function.
+- When you pass a list to a function, the function can modify the list.
+- Any changes made to the list inside the function's body are permenent.
+- Every function should have one specific job.
+- If you need to preserve the original list, you should pass a copy of the original list to the function when calling.
+```
+print_models(unprinted_designs[:], completed_models)
+```
+
+## Passing an Arbitrary Number of Arguments
+Python packs the arguments into a tuple, even if the function receives only one value.
+```
+('pepperoni',)
+('mushrooms', 'green peppers', 'extra cheese')
+```
+## Mixing Positional and Arbitrary Arguments
+The parameter that accepts an arbitrary number of arguments must be placed last in the function definition.
+```
+def make_pizza(size, *toppings):
+	"""Summarize the pizza we are about to make."""
+	print("\nMaking a " + str(size) + 
+	"-inch pizza with the following toppings:")
+	for topping in toppings: print("- " + topping)
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+```
+## Storing Your Functions in Modules
+- You can store your functions in a seperate file called a *module* and then *importing* that module into your main program.
+- The best approach is to import the function or functions you want, or import the entire module and use the dot notation.
+
+## Styling Functions
+- Functions should have descriptive names, and these names should use lowercase letters and underscores.
+- Every function should have a comment that explains concisely what the function does using the dotstring format.
+- If you speficy a default value for a parameter, no spaces should be used on either side of the equal sign:
+ ```
+ def function_name(parameter_0, parameter_1='default value')
+ ```
+ - The same convention should be used for keyword arguments in function calls:
+ ```
+ function_name(value_0, parameter_1='value')
+ ```
+- If your program or module has more than one function, you can sepa- rate each by two blank lines to make it easier to see where one function ends and the next one begins.
+
+# Classes
+In object-oriented programming you write classes that represent real-world things and situations, and you create objects based on these classes. 
+- By convention, capitalized names refer to classes in Python.
+- The *__init__()* method is a special method Python runs automatically whenever we create a new instance
+- The self parameter is required in the method definition
+- When you create a class in Python 2.7, you need to make one minor change. You include the term object in parentheses when you create a class
 
