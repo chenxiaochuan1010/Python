@@ -6,6 +6,7 @@ class User():
         self.first_name = first_name
         self.last_name = last_name
         self.user_name = user_name
+        self.login_attempts = 0
 
     def describe_user(self):
         """print out all attributes of a user"""
@@ -18,15 +19,31 @@ class User():
         """Personalized greeting to the user"""
         print("Welcome login, %s!" % self.user_name.title())
 
-user_1 = User('xiaochuan', 'chen', 'cxc1010')
-user_2 = User('min', 'jia', 'lily')
-user_3 = User('yanxi', 'chen', 'cyx2016')
+    def increment_login_attempts(self):
+        """Add login attempts by 1"""
+        self.login_attempts += 1
 
-user_1.describe_user()
-user_1.greet_user()
+    def reset_login_attempts(self):
+        """Set login attempts back to 0."""
+        self.login_attempts = 0
 
-user_2.describe_user()
-user_2.greet_user()
+# user_1 = User('xiaochuan', 'chen', 'cxc1010')
+# user_2 = User('min', 'jia', 'lily')
+# user_3 = User('yanxi', 'chen', 'cyx2016')
 
-user_3.describe_user()
-user_3.greet_user()
+# user_1.describe_user()
+# user_1.greet_user()
+
+# user_2.describe_user()
+# user_2.greet_user()
+
+# user_3.describe_user()
+# user_3.greet_user()
+
+user = User('xiaochuan', 'chen', 'cxc1010')
+user.increment_login_attempts()
+print("Login attempts = %i" % user.login_attempts)
+user.increment_login_attempts()
+print("Login attempts = %i" % user.login_attempts)
+user.reset_login_attempts()
+print("Login attempts = %i" % user.login_attempts)
