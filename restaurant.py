@@ -9,8 +9,9 @@ class Restaurant():
 
     def describe_restaurant(self):
         """Print out descriptive information of a restaurant."""
-        print("\nName of Restaurant: %s" % self.restaurant_name.title())
-        print("Cuisine Type: %s" % self.cuisine_type.title())
+        msg = self.restaurant_name.title() + " serves delicious "
+        msg += self.cuisine_type + '!'
+        print("\n" + msg)
 
     def open_restaurant(self):
         """Show a message of restaurant opening"""
@@ -21,39 +22,8 @@ class Restaurant():
         self.number_served = number
 
     def increment_number_served(self, increment_num):
+        """Allow user to increment the number of customers served."""
         if increment_num >= 0:
             self.number_served += increment_num
         else:
             print("Increment number can't be negative!")
-
-# my_restaurant = Restaurant("hujin restaurant", "chinese")
-
-# print("Name of Restaurant: %s" % my_restaurant.restaurant_name.title())
-# print("Cuisine Type: %s" % my_restaurant.cuisine_type.title())
-
-# print("\n")
-# my_restaurant.describe_restaurant()
-# my_restaurant.open_restaurant()
-
-# restaurant_1 = Restaurant('hujin', 'hubei cuisine')
-# restaurant_2 = Restaurant('quan ju de', 'roast duck')
-# restaurant_3 = Restaurant('mcdonaut', 'fast food')
-
-# restaurant_1.describe_restaurant()
-# restaurant_2.describe_restaurant()
-# restaurant_3.describe_restaurant()
-
-restaurant = Restaurant('hujin', 'hubei cuisine')
-restaurant.set_number_served(20)
-print("The restaurant is now serving %i people." % restaurant.number_served)
-restaurant.increment_number_served(10)
-print("The restaurant is now serving %i people." % restaurant.number_served)
-restaurant.increment_number_served(-10)
-print("The restaurant is now serving %i people." % restaurant.number_served)
-
-
-
-# restaurant.number_served = 10
-# print("The restaurant is now serving %i people." % restaurant.number_served)
-
-

@@ -268,3 +268,15 @@ In object-oriented programming you write classes that represent real-world thing
 - The self parameter is required in the method definition
 - When you create a class in Python 2.7, you need to make one minor change. You include the term object in parentheses when you create a class
 
+## Inheritance
+- When one class *inherits* from another, it automatically takes on all the attributes and methods of the first class. 
+- The original class is called the *parent class*, and the new class is the *child* class.
+- Child class is also free to define new attributes and methods of its own.
+- When you create a child class, the parent class must be part of the current file and must appear before the child class in the file.
+- The name of the parent class must be included in parentheses in the definition of the child class.
+
+## Overriding Methods from the Parent Class
+- You can define a method in the child class with the same name as the method you want to override in the parent class.
+- Python will disregard the parent class method and only pay attention to the method you define in the child class.
+- When you use inheritance, you can make your child classes retain what you need and override anything you don’t need from the parent class.
+- You import multiple classes from a module by separating each class with a comma
