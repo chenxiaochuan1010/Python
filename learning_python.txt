@@ -1,0 +1,4 @@
+In Python you can calculate math problems
+In Python you can model real world objects
+In Python you can operate files
+In Python you can build websites

@@ -280,3 +280,26 @@ In object-oriented programming you write classes that represent real-world thing
 - Python will disregard the parent class method and only pay attention to the method you define in the child class.
 - When you use inheritance, you can make your child classes retain what you need and override anything you don’t need from the parent class.
 - You import multiple classes from a module by separating each class with a comma
+
+## Styling Classes
+- Class names should be written in *CamelCapsl*: capitalize the first letter of each word in the name, and don't use underscores.
+- Within a class, you can use one blank line between methods, and within a module you can use two blank lines to seperate classes.
+- Import of modules: first, standard modules; then add a blank line and the import statements for the module you wrote.
+
+# Files
+## Reading from a File
+```
+with open('pi_digits.txt') as file_object: 
+	contents = file_object.read() 
+	print(content)
+```
+- The keyword *with* closes the file once access to it.
+- Python will close the file automatically when the time is right.
+- *read()* returns an empty string when it reaches the end of the file
+- If you want to remove the extra blank line, you can use *rstrip()* in the print statement
+
+## Writing to a File
+- in *open()* function, you define the second argument: read mode('r'), write mode('w'), append mode('a'), read and write mode('r+')
+- The *open()* function automatically creates the file you're writing to if it doesn't already exist.
+- Be carful with write mode: if the file does exist, Python will erase the file before returning the file object.
+- Python can only write strings to a text file. If you want to store numerical data in a text file, you'll have to convert the data to string format first using the *str()* function.
