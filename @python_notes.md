@@ -303,3 +303,8 @@ with open('pi_digits.txt') as file_object:
 - The *open()* function automatically creates the file you're writing to if it doesn't already exist.
 - Be carful with write mode: if the file does exist, Python will erase the file before returning the file object.
 - Python can only write strings to a text file. If you want to store numerical data in a text file, you'll have to convert the data to string format first using the *str()* function.
+
+# Storing Data
+- JSON data format is not specific to Python
+- You can share data you store in the JSON format with people who work in many other programming languages.
+- Saving data with json is useful when you’re working with user-generated data
